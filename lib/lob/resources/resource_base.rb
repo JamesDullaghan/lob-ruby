@@ -43,6 +43,18 @@ module Lob
         submit request
       end
 
+      def update(resource_id, body={}, headers={}, query={})
+        request = {
+          method: :put,
+          url: resource_url(resource_id),
+          body: body,
+          headers: headers,
+          query: query
+        }
+
+        submit request
+      end
+
       def destroy(resource_id)
         request = {
           method: :delete,
