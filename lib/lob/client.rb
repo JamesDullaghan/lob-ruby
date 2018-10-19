@@ -46,6 +46,10 @@ module Lob
       Lob::Resources::Postcard.new(config)
     end
 
+    def templates
+      Lob::Resources::Template.new(config)
+    end
+
     def us_autocompletions
       Lob::Resources::USAutocompletions.new(config)
     end
